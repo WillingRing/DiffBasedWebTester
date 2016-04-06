@@ -42,19 +42,19 @@ public class WebScraper {
     writeLogFile("https://twitter.com/bob", 0);
 
     setPrefixFileName("TodoMVC");
-    writeLogFile("http://todomvc.com/architecture-examples/backbone/", 0);
-    driver.findElement(By.id("new-todo")).sendKeys("test\n");
+    writeLogFile("http://todomvc.com/examples/backbone/", 0);
+    driver.findElement(By.className("new-todo")).sendKeys("test\n");
     sleep(1000);
     writeLogFile();
     removeFirstTodo();
     writeLogFile();
-    driver.findElement(By.id("new-todo")).sendKeys("test2\n");
+    driver.findElement(By.className("new-todo")).sendKeys("test2\n");
     sleep(1000);
     writeLogFile();
     removeFirstTodo();
 
     setPrefixFileName("TodoMVC2");
-    driver.get("http://todomvc.com/architecture-examples/backbone/");
+    driver.get("http://todomvc.com/examples/backbone/");
     String[] htmls1 = addTodos("abc", "test");
     String[] htmls2 = addTodos("def", "test");
     writeLogFile(htmls1[0]);
@@ -83,13 +83,13 @@ public class WebScraper {
   }
 
   private String[] addTodos(String todo1, String todo2) {
-    driver.findElement(By.id("new-todo")).sendKeys(todo1 + "\n");
+    driver.findElement(By.className("new-todo")).sendKeys(todo1 + "\n");
     sleep(1000);
     String html1 = driver.getPageSource();
     removeFirstTodo();
-    driver.findElement(By.id("new-todo")).sendKeys(todo1 + "\n");
+    driver.findElement(By.className("new-todo")).sendKeys(todo1 + "\n");
     sleep(1000);
-    driver.findElement(By.id("new-todo")).sendKeys(todo2 + "\n");
+    driver.findElement(By.className("new-todo")).sendKeys(todo2 + "\n");
     sleep(1000);
     String html2 = driver.getPageSource();
     removeFirstTodo();

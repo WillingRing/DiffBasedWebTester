@@ -35,7 +35,7 @@ public class HtmlFormatter {
       LSSerializer serializer = factory.createLSSerializer();
       DOMConfiguration config = serializer.getDomConfig();
       config.setParameter("format-pretty-print", Boolean.TRUE);
-      config.setParameter("element-content-whitespace", Boolean.FALSE);
+//      config.setParameter("element-content-whitespace", Boolean.FALSE);
 
       LSOutput lsOutput = factory.createLSOutput();
       lsOutput.setEncoding("UTF-16");
