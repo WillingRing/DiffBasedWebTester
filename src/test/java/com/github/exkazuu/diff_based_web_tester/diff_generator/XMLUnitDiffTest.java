@@ -22,6 +22,6 @@ public class XMLUnitDiffTest {
     String expected =
         Resources.toString(Resources.getResource("diff_generator/xmlunit.diff"),
             StandardCharsets.UTF_8);
-    assertEquals(expected, diff);
+    assertEquals(expected, diff); // TODO: Fix
   }
 }

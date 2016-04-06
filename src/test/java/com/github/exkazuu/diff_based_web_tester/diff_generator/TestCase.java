@@ -44,7 +44,7 @@ public class TestCase {
   public void testGoogle() throws InterruptedException {
     System.out.println("------------- Google -------------");
     setPrefixFileName("Google");
-    compareDiffAlgorithmsUsing2Htmls();
+    compareDiffAlgorithmsUsing2Htmls(); // TODO: Fix
   }
 
   @Test
